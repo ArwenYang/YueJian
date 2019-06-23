@@ -1,0 +1,44 @@
+#header{
+	width: 100%;
+	height: 1.8rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #323237;
+	/*opacity: 0.9;*/
+	z-index: 999;
+}
+#header>.logo{
+	float: left;
+	font-family:logo;
+	font-size: 1rem;
+	color:#eee;
+	width: 20%;
+	text-align: center;
+	line-height: 1.7rem;	
+}
+#header>input{
+	float: left;
+}
+#header>input[type="text"]{
+	width: 50%;
+	font-size: .6rem;
+	color: #ddd;
+	margin:.5rem auto 0 auto;
+}
+#header>input[type="button"]
+{
+	font-size: .6rem;
+	width: 11%;
+	height:1rem;
+	border-radius:.3rem ;
+	margin:.5rem .5rem 0 .5rem;
+	background-color: #1EB496;
+}
+#header>.pic{
+	width: 1.5rem;
+	float: left;
+	border-radius:50%;
+	margin-left: .3rem;
+	margin-top: .1rem;
+}

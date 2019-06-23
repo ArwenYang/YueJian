@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>精彩活动详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/activityDetailStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou" @click="back"></span>
+				<p>精选活动</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			
+			<!-- 活动图片开始 -->
+			<img id="activity_pic" :src="'http://172.24.10.175/workout/Uploads/'+thumb">
+			<!-- 活动图片结束 -->
+			
+			<!--活动基本信息开始-->
+			<div id="basicInfo">
+				<p class="large">{{activity_name}}</p>
+				<p>已有<span>{{attend_num}}</span>人报名活动</p>
+				<p><span>{{hits}}</span>次点击</p>
+				<div class="operation">
+					<img src="img/share.png" alt="">
+					<p>分享</p>
+					<img src="img/collect_1.png" alt="">
+					<p>收藏</p>
+					<p class="price">￥{{activity_price}}/<span>￥{{activity_price_stu}}（学生价）</span></p>
+				</div>		
+				<p class="date">发布于{{update_time}}</p>
+			</div>
+			<!--活动基本信息结束-->
+			
+			<!--活动简介开始-->
+			<div class="section">
+				<p class="title">活动简介</p>
+				<p class="notice">活动日期：<span>{{start_date}}</span>到<span>{{end_date}}</span></p>
+				<p v-html="introduction"></p>
+			</div>
+			<!--活动简介结束-->
+			
+			<!--活动注意事项开始-->
+			<div class="section">
+				<p class="title">注意事项</p>
+				<p class="notice" v-text="notice"></p>
+			</div>
+			<!--活动注意事项结束-->
+			
+			<!--活动联系方式开始-->
+			<div class="section last">
+				<p class="title">联系方式</p>
+				<ul>
+					<li>
+						<p class="left">地址</p>
+						<p class="right">{{place}}</p>
+					</li>
+					<li>
+						<p class="left">咨询热线</p>
+						<p class="right">{{contact_tel}}</p>
+					</li>
+				</ul>
+			</div>
+			<!--活动联系方式结束-->
+			
+			<!-- 立即报名开始 -->
+			<div id="footer">
+				<p @click="check()">立即报名</p>
+			</div>
+			<!-- 立即报名结束 -->
+		</div>
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/activityDetailStyle.js"></script>
+	</body>
+</html>

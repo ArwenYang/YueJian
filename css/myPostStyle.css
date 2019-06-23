@@ -1,0 +1,127 @@
+/*头部标题栏*/
+#header {
+	width: 100%;
+	height: 2rem;
+	background: #323237;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#header>span {
+	color: #1EB496;
+	font-size: 1rem;
+	margin: .5rem;
+	float: left;
+}
+
+#header>p {
+	color: #CCCCCC;
+	font-size: .8rem;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+	letter-spacing: .5rem;
+	float: left;
+	margin-left: 5rem;
+}
+/*发布晒图*/
+#border {
+	width: 90%;
+	height: 3rem;
+	border: .2rem solid #1EB496;
+	margin: 2.5rem auto 0rem;
+}
+
+#border>p {
+	width: 60%;
+	height: 70%;
+	background-color: #1EB496;
+	color: #fff;
+	margin: 2.5% auto;
+	font-size: .8rem;
+	text-align: center;
+	line-height: 2.1rem;
+}
+/*晒图列表*/
+#photoList {
+	margin-bottom: 2rem;
+}
+
+#photoList li {
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: .25rem solid #f0f0f0;
+}
+
+#photoList li .head {
+	height: 3rem;
+	line-height: 3rem;
+	font-size: .7rem;
+}
+
+#photoList li .head .own_pic {
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	margin: 1rem .5rem 1rem 0;
+	border-radius: 50%;
+}
+
+#photoList li .subject {
+	white-space: normal;
+	line-height: 1.5rem;
+	font-size: .8rem;
+}
+
+#photoList li .content {
+	overflow: hidden;
+	width: 100%;
+}
+
+#photoList li .content>img {
+	width: 33%;
+	height: 6rem;
+	margin-top: .3rem;
+	border-radius: .5rem;
+	float: left;
+}
+
+#photoList li .content>p {
+	white-space: normal;
+	max-height: 3.2rem;
+	line-height: 1.6rem;
+	font-size: .7rem;
+	color: #999;
+}
+
+#photoList li .foot {
+	margin: 0 auto;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: .6rem;
+	color: #999;
+	overflow: hidden;
+}
+
+#photoList li .foot>img {
+	width: .7rem;
+	height: .7rem;
+	float: right;
+	margin-top: .7rem;
+}
+
+#photoList li .foot>span {
+	float: right;
+	margin-right: .5rem;
+}
+
+#photoList li .foot>.time {
+	float: left;
+}
+/*列表末尾图*/
+#end {
+	margin: 0px auto;
+	width: 4rem;
+}

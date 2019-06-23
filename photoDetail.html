@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>晒图详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/photoDetailStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back()"></span>
+				<p>晒图详情</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			<!-- 晒图内容区开始 -->
+			<div id="content">
+				<div class="head">
+					<img :src="photo" alt="" class="own_pic">
+					<span class="name">{{user_name}}</span>
+				</div>
+				<p class="subject">
+					{{title}}
+				</p>
+				<div class="content">
+	
+				</div>
+				<div class="foot"> 
+					<span class="time">{{update_time}}</span>
+					<span>点赞</span>
+					<img src="img/good2.png" alt="" >					
+				</div>	
+			</div>
+			
+			<!-- 晒图内容区结束 -->
+			
+			<!-- 评论列表开始 -->
+			<div id="comment">
+				<p>评论区</p>
+				<ul>
+					<!--<li>
+						<img src="img/lunniangpic.png"/>
+						<div class="comentInfo">
+							<p class="commentName">姓名</p>
+							<p class="commentContent">评论内容</p>
+						</div>
+						<p>0000-00-00 00:00:00</p>
+					</li>-->
+				</ul>
+			</div>
+			<!-- 评论列表结束 -->
+			
+			<form action="javascript:;" method="post" id="commentForm">
+				<!--发布评论区-->
+				<div id="footer">
+					<input type="text" name="reply" id="" value="" placeholder="评论">
+					<input type="button" name="" id="" value="评论" @click="comment()" />
+				</div>
+				<!--发布评论区-->	
+			</form>
+		</div>
+		
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/jquery-form.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/photoDetailJS.js"></script>
+	</body>
+</html>

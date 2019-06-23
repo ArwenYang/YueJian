@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布晒图</title>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/photoInsertStyle.css">
+	</head>
+	<body>
+		<!-- 头部标题栏开始 -->
+		<div id="header">
+			<span class="iconfont icon-zuoshuangjiantou " onclick="back()"></span>
+			<p>发布晒图</p>
+		</div>
+		<!-- 头部标题栏结束 -->
+		
+		<form action="javascript:;" method="post" enctype="multipart/form-data" id="photoForm">
+			<!--填写内容区开始-->
+			<div id="input">	
+					<textarea class="container_text" name="title" rows="" cols="" placeholder="这一刻的心情..."></textarea>
+					<div class="container_pic">    
+			            <span id="add" class="iconfont icon-tianjia"></span>
+			            <input type="file" id="file_input" multiple name="thumb0"/>          
+			       </div> 		        
+			</div>
+			<!--填写内容区结束-->
+			<!-- 发布开始 -->
+			<button id="footer" onclick="publish()">立即发布</button>
+			<!-- 发布结束 -->
+		</form>
+		<script src="js/jquery-1.12.4.min.js"></script> 
+		<script src="js/jquery-form.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/photoInsertJS.js"></script>    
+
+	</body>
+</html>

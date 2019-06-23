@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>报名结算页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/activitySignUpStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back()"></span>
+				<p>报名结算</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			<!-- 身份信息开始 -->
+			<div id="role">
+				<p>姓名：</p>
+				<p>联系号码：{{user_tel}}</p>
+				<p>身份：{{rolename}}</p>
+			</div>
+			<!-- 身份信息结束 -->
+			
+			<!--订单详情开始-->
+			<div id="count">
+				<div class="order">
+					<p class="name"><span>活动名称：</span>{{activity_name}}</p>
+					<div class="mid">
+						<img :src="'http://172.24.10.175/workout/Uploads/'+thumb">
+						<p>￥{{price}}<span>×1</span></p>
+					</div>
+					<div class="buy">
+						<p>报名数量：</p>
+						<div class="num">
+							<div @click="handleReduce()">-</div>
+							<div class="number">{{counter}}</div>
+							<div @click="counter++">+</div>
+						</div>	
+					</div>
+						
+					<div class="detail">
+						<p>保险信息：</p>
+						<p>报名须知：{{notice}}</p>
+					</div>
+				</div>
+			</div>
+			<!--订单详情结束-->
+			
+			<!--结算方法开始-->
+			<my-component></my-component>
+			<!--<div id="method">
+				<ul>
+					<li>
+						<img src="img/zfbpay.png">
+						<p>支付宝</p>
+						<input type="radio" name="method" id="method" value="0" checked="checked">
+					</li>
+					<li>
+						<img src="img/wxpay.png">
+						<p>微信</p>
+						<input type="radio" name="method" id="method" value="1">
+					</li>
+					<li>
+						<img src="img/lqpay.png">
+						<p>零钱</p>
+						<input type="radio" name="method" id="method" value="2">
+					</li>
+				</ul>
+			</div>-->
+			<!--结算方法结束-->
+			
+			<!-- 结算开始 -->
+			<div id="footer">
+				<div @click="finish()">结算</div>
+				<p>合计：<span>￥{{priceCount}}</span></p>
+			</div>
+			<!-- 结算结束 -->		
+		</div>
+		<template id="myComponent">
+			<div id="method">
+				<ul>
+					<li>
+						<img src="img/zfbpay.png">
+						<p>支付宝</p>
+						<input type="radio" name="method" id="method" value="0" checked="checked">
+					</li>
+					<li>
+						<img src="img/wxpay.png">
+						<p>微信</p>
+						<input type="radio" name="method" id="method" value="1">
+					</li>
+					<li>
+						<img src="img/lqpay.png">
+						<p>零钱</p>
+						<input type="radio" name="method" id="method" value="2">
+					</li>
+				</ul>
+			</div>
+		</template>
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/activitySignUpJS.js"></script>
+	</body>
+</html>

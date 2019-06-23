@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>最近比赛详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/competitionDetailStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back()"></span>
+				<p>最近比赛</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			
+			<!-- 比赛图片开始 -->
+			<img id="competition_pic" :src="'http://172.24.10.175/workout/Uploads/'+thumb">
+			<!-- 比赛图片结束 -->
+			
+			<!--比赛基本信息开始-->
+			<div id="basicInfo">
+				<p class="large">{{name}}</p>
+				<p><span>{{cdate}}</span>开始比赛</p>
+				<p><span>{{hits}}</span>次点击</p>
+				<div class="operation">
+					<p>分享</p>
+					<img src="img/share.png" alt="">
+					<p>关注</p>
+					<img src="img/collect_1.png" alt="">
+				</div>		
+			</div>
+			<!--比赛基本信息结束-->
+			
+			<!--比赛简介开始-->
+			<div class="section" id="info">
+				<p class="title">比赛简介</p>
+				<p v-html="introduction"></p>
+			</div>
+			<!--比赛简介结束-->
+			
+			<!--比赛详情开始-->
+			<div class="section">
+				<p class="title">比赛详情</p>
+				<iframe id="detail" :src="detail_url" width="" height=""></iframe>
+			</div>
+			<!--比赛详情结束-->	
+		</div>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/competitionDetailJS.js"></script>
+	</body>
+</html>

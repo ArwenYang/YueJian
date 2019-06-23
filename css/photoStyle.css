@@ -1,0 +1,108 @@
+/*字体*/
+
+@font-face {
+	font-family: logo;
+	src: url('../font/logoFont.ttf');
+}
+
+@font-face {
+	font-family: type;
+	src: url('../font/type.ttf');
+}
+/*发布晒图*/
+#border {
+	width: 90%;
+	height: 3rem;
+	border: .2rem solid #1EB496;
+	margin: 2.5rem auto 0rem;
+}
+
+#border>p {
+	width: 60%;
+	height: 70%;
+	background-color: #1EB496;
+	color: #fff;
+	margin: 2.5% auto;
+	font-size: .8rem;
+	text-align: center;
+	line-height: 2.1rem;
+}
+/*晒图列表*/
+#photoList {
+	margin-bottom: 2rem;
+}
+
+#photoList li {
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: .25rem solid #f0f0f0;
+}
+
+#photoList li .head {
+	height: 3.5rem;
+	line-height: 3.5rem;
+	font-size: .7rem;
+}
+
+#photoList li .head .own_pic {
+	float: left;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 1rem .5rem 1rem 0;
+	border-radius: 50%;
+}
+
+#photoList li .subject {
+	white-space: normal;
+	line-height: 1.5rem;
+	font-size: .8rem;
+}
+
+#photoList li .content {
+	overflow: hidden;
+	width: 100%;
+}
+
+#photoList li .content>img {
+	width: 33%;
+	height: 6rem;
+	margin-top: .3rem;
+	border-radius: .5rem;
+	float: left;
+}
+
+#photoList li .content>p {
+	white-space: normal;
+	max-height: 3.2rem;
+	line-height: 1.6rem;
+	font-size: .7rem;
+	color: #999;
+}
+
+#photoList li .foot {
+	clear: both;
+	margin: 0 auto;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: .6rem;
+	color: #999;
+}
+
+#photoList li .foot>img {
+	display: inline-block;
+	width: .7rem;
+	height: .7rem;
+}
+
+#photoList li .foot>img:nth-of-type(1) {
+	margin-left: 7rem;
+}
+
+#photoList li .foot>img:nth-of-type(2) {
+	margin-left: .7rem;
+}
+/*底部导航被选中*/
+.chosen {
+	color: #1EB496;
+	font-weight: bold;
+}

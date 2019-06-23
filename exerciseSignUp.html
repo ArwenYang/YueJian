@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>报名结算页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<style type="text/css">
+			#header{
+				width: 100%;
+				height: 2rem;
+				background: #323237;
+				overflow: hidden;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			#header>span{
+				color: #1EB496;
+				font-size: 1rem;
+				margin:.5rem;
+				float: left;
+			}
+			#header>p{
+				color: #CCCCCC;
+				font-size: .8rem;
+				text-align: center;
+				height: 2rem;
+				line-height: 2rem;
+				letter-spacing: .5rem;
+				float: left;
+				margin-left: 5rem;
+			}
+			#role{
+				margin:3rem auto 0rem ;
+				overflow: hidden;
+				width: 50%;
+			}
+			#role>p{
+				font-size: .7rem;
+				line-height: 1.5rem;
+			}
+			
+			
+			#count{
+				margin-top: 1rem;
+			}
+			.order{
+				width: 100%;
+				border-top: 1.3rem solid #f0f0f0;
+			}
+			.order>.name{
+				width: 95%;
+				margin: auto;
+				font-size: .8rem;
+				letter-spacing: .1rem;
+				line-height: 1.1rem;
+				padding:1rem 0rem .6rem;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.order>.name>span{
+				font-size: .6rem;
+			}
+			.order > .type {
+			    width: 95%;
+			    margin: auto;
+			    font-size: .5rem;
+			    letter-spacing: .1rem;
+			    line-height: .8rem;
+			    padding-bottom: .2rem;
+			    border-bottom: 1px solid #CCCCCC;
+			}
+			.order>.mid{
+				width: 95%;
+				height: 7rem;
+				margin: auto;
+				overflow: hidden;
+				padding:.8rem 0rem;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.order>.mid>img{
+				width:60%;
+				height:7rem;
+				float: left;
+			}
+			.order>.mid>p{
+				width: 40%;
+				height: 7rem;
+				line-height: 7rem;
+				font-size:1rem;
+				text-align: center;
+				float: right;
+				color:#ff5400;
+			}
+			.order>.mid>p>span{
+				font-size: .6rem;
+				color: #333;
+			}
+			.order>.buy{
+				width: 95%;
+				height: 2.5rem;
+				margin: auto;
+				border-bottom: 1px solid #CCCCCC;
+				overflow: hidden;
+			}
+			.order>.buy>p{
+				float: left;
+				font-size: .7rem;
+				height:2.5rem;
+				line-height:2.5rem;
+				color: #aaa;
+			}
+			.order>.buy>.num{
+				float: right;
+				overflow: hidden;
+				height:1.3rem;
+				margin: .6rem 1rem;
+				border: .12rem solid #bbb;
+				border-radius: .3rem;
+			}
+			.order>.buy>.num>div{
+				float: left;
+				font-weight: bold;
+				text-align: center;
+				width: 1.2rem;
+				height:1.3rem;
+				line-height: 1.3rem;
+			}
+			.order>.buy>.num>.number{
+				font-weight: normal;
+				width: 2.6rem;
+				border-left:.12rem solid #bbb ;
+				border-right:.12rem solid #bbb ;
+			}
+			.order>.detail{
+				width: 95%;
+				margin: auto;
+			}
+			.order>.detail>p{
+				line-height: 1rem;
+				font-size: .6rem;
+				color: #aaa;
+				margin: .5rem 0rem;
+			}
+			#method{
+				padding-bottom: 3rem;
+				border-top: 1.3rem solid #f0f0f0;
+			}
+			#method>ul>li{
+				width: 95%;
+				height: 2rem;
+				line-height: 2rem;
+				margin: auto;
+				overflow: hidden;
+				border-bottom: 1px solid #ddd;
+			}
+			#method>ul>li:nth-of-type(3){
+				border: none;
+			}
+			#method>ul>li>img{
+				height:1.2rem;
+				margin: .4rem .7rem;
+				float: left;
+			}
+			#method>ul>li>p{
+				float: left;
+				font-size: .8rem;
+				color: #555;
+			}
+			#method>ul>li>input[type="radio"]{
+				float: right;
+				margin-top:.8rem;
+			}
+			#footer{
+				width: 100%;
+				height:2.3rem;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				z-index: 999;
+				border-top: .1rem solid #ccc;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			#footer>p{
+				font-size: .6rem;
+				height: 2.3rem;
+				line-height: 2.3rem;
+				float: right;
+			}
+			#footer>p>span{
+				font-size: .8rem;
+				color:#ff5400;
+				font-weight: bold;
+			}
+			#footer>div{
+				font-size: .7rem;
+				height: 1.5rem;
+				line-height: 1.5rem;
+				width: 3rem;
+				margin: .4rem 1rem;
+				border: 1px solid #aaa;
+				border-radius: .2rem;
+				background-color: #96e8ba;
+				text-align: center;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back()"></span>
+				<p>报名结算</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			<!-- 选择身份开始 -->
+			<div id="role">
+				<p>姓名：</p>
+				<p>联系号码：{{user_tel}}</p>
+				<p>身份：{{rolename}}</p>
+			</div>
+			<!-- 选择身份结束 -->
+			
+			<!--订单详情开始-->
+			<div id="count">
+				<div class="order">
+					<p class="name"><span>训练名称：</span>{{name}}</p>
+					<p class="type"><span>训练类型：</span>{{degree}}</p>
+					<div class="mid">
+						<img :src="'http://172.24.10.175/workout/Uploads/'+thumb">
+						<p>￥{{price}}<span>×1</span></p>
+					</div>
+					<div class="buy">
+						<p>报名数量：</p>
+						<div class="num">
+							<div @click="handleReduce()">-</div>
+							<div class="number">{{counter}}</div>
+							<div @click="counter++">+</div>
+						</div>	
+					</div>
+						
+					<div class="detail">
+						<p>保险信息：</p>
+						<p>报名须知：{{notice}}</p>
+					</div>
+				</div>
+			</div>
+			<!--订单详情结束-->
+			
+			<!--结算方法开始-->
+			<div id="method">
+				<ul>
+					<li>
+						<img src="img/zfbpay.png">
+						<p>支付宝</p>
+						<input type="radio" name="method" id="method" value="0" checked="checked">
+					</li>
+					<li>
+						<img src="img/wxpay.png">
+						<p>微信</p>
+						<input type="radio" name="method" id="method" value="1">
+					</li>
+					<li>
+						<img src="img/lqpay.png">
+						<p>零钱</p>
+						<input type="radio" name="method" id="method" value="2">
+					</li>
+				</ul>
+			</div>
+			<!--结算方法结束-->
+			
+			<!-- 结算开始 -->
+			<div id="footer">
+				<div @click="finish()">结算</div>
+				<p>合计：<span>￥{{priceCount}}</span></p>
+			</div>
+			<!-- 结算结束 -->		
+		</div>
+		
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					counter:1,
+					id:"",
+					name:"",
+					thumb:"",
+					notice:"",
+					price:"",
+					degree:"",
+					user_tel:"",
+					user_name:"",
+					rolename:window.sessionStorage.getItem("rolename"),
+					realname:window.sessionStorage.getItem("realname"),
+				},
+				mounted:function(){
+		 			this.getActivityData();
+		 			this.getUserData();
+		 		},
+				methods:{
+		 			getActivityData(){
+		 				var id=location.href.split("?")[1].split("=")[1];
+		 				var _this=this;
+		 				var trainurl="http://172.24.10.175/workout/api.php/lists/mod/train/id/"+id;
+		 				this.$http.jsonp(trainurl).then(function(res) {
+		 					_this.id=res.body[0]["id"];
+		 					_this.name=res.body[0]["name"];
+		 					_this.thumb=res.body[0]["thumb"];
+							_this.price=res.body[0]["price"];	
+		 					_this.notice=res.body[0]["bmnotice"];	
+		 					if(res.body[0]["degree"]==1){
+		                    	_this.degree='入门';
+		                    }
+		                    else if(res.body[0]["degree"]==2){
+		                    	_this.degree='菜鸟';
+		                    }
+		                    else if(res.body[0]["degree"]==3){
+		                    	_this.degree='进阶';
+		                    }
+		 					_this.contact_tel=res.body[0]["user_tel"];
+						}, function() {
+							console.log('请求失败处理');
+						});
+		 			},
+		 			getUserData(){
+		 				var user_id=window.sessionStorage.getItem("user_id");
+		 				var _this=this;
+		 				var userurl="http://172.24.10.175/workout/api.php/getmine/userid/"+user_id;
+		 				this.$http.jsonp(userurl).then(function(res) {					
+		 					_this.user_tel=res.body["user_name"];
+		 					console.log(res.body);
+						}, function() {
+							console.log('请求失败处理');
+						});
+		 			},
+		 			handleReduce(){
+		 				if(this.counter>1){
+		 					this.counter--;
+		 				}						
+					},
+					back(){
+						history.go(-1);
+					},
+					finish(){
+						alert("结算成功，返回训练详情页");
+						btn.onclick=function(){
+							history.go(-1);
+						};
+					}
+		 		},	
+				computed:{
+					priceCount(){
+						return this.counter*this.price;
+					}
+				}
+			});
+			
+		</script>
+	</body>
+</html>

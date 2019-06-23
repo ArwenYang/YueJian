@@ -1,0 +1,270 @@
+/*字体*/
+@font-face {
+	font-family: logo;
+	src: url('../font/logoFont.ttf');
+}
+
+@font-face {
+	font-family: type;
+	src: url('../font/type.ttf');
+}
+
+
+/*轮播图*/
+.swiper-container {
+	width: 100%;
+	clear: both;
+	margin-top: 1.8rem;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+	width: .2rem;
+	height: .2rem;
+}
+
+.swiper-pagination-bullet-active {
+	width: .4rem;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 .1rem;
+}
+
+.swiper1 img {
+	width: 100%;
+	height: 100%;
+}
+
+#nav {
+	height: 3rem;
+	width: 100%;
+	margin-top: .3rem;
+	overflow: hidden;
+	border-bottom: .4rem solid #f0f0f0;
+}
+
+#nav>div {
+	width: 20%;
+	height: 100%;
+	float: left;
+	margin-left: 10%;
+}
+
+#nav img {
+	width: 1.5rem;
+	border-radius: 50%;
+	margin: auto;
+}
+
+#nav p {
+	font-size: .6rem;
+	color: #666;
+	margin-top: .2rem;
+	text-align: center;
+}
+
+
+/*列表框架*/
+#mid {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+#mid>.type {
+	overflow: hidden;
+	height: 1.7rem;
+	margin-top: 1rem;
+}
+
+#mid>.type>.color {
+	float: left;
+	height: 70%;
+	width: .3rem;
+	margin: .2rem;
+	background-color: #252e33;
+}
+
+#mid>.type>p {
+	float: left;
+	font-size: 1rem;
+	font-family: type;
+	font-weight: bold;
+	letter-spacing: .1rem;
+	height: 1.7rem;
+	line-height: 1.7rem;
+}
+
+.list {
+	width: 95%;
+	margin: 1rem auto 0rem;
+	padding-bottom: .8rem;
+	border-bottom: .3rem solid #f0f0f0;
+}
+
+.list li {
+	width: 100%;
+	height: 8.5rem;
+	margin-bottom: .5rem;
+}
+
+
+/*精彩活动*/
+#activity img {
+	width: 100%;
+	height: 100%;
+}
+
+#activity a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#activity div {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-top: -8.5rem;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	position: relative;
+}
+
+#activity div>p {
+	margin: auto;
+	color: white;
+	font-size: .7rem;
+}
+
+#activity div>p>span {
+	color: #1EB496;
+}
+
+#activity .activity_name {
+	padding-top: 1rem;
+	line-height: 2rem;
+	/*height: 4.8rem;*/
+	font-size: 1rem;
+}
+
+#activity .activity_date {
+	line-height: 1.5rem;
+	height: 1.5rem;
+	font-size: .7rem;
+}
+
+#activity .activity_hits {
+	line-height: 1.2rem;
+	height: 1.2rem;
+	font-size: .7rem;
+}
+
+
+/*权威大师*/
+#master>li {
+	height: 5rem;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+
+#master>li>a {
+	float: left;
+}
+
+#master>li>div {
+	font-size: .7rem;
+	border: .1rem solid #ccc;
+	border-left: none;
+}
+
+#master img {
+	width: 7rem;
+	height: 5rem;
+}
+
+#master>li>.masterText {
+	flex-grow: 1;
+	float: left;
+	position: relative;
+}
+
+#master>li>.masterText>.master_name {
+	font-size: .8rem;
+	margin: .5rem .5rem .3rem;
+}
+
+#master>li>.masterText>.master_name span {
+	color: #333333;
+	font-size: .6rem;
+}
+
+#master>li>.masterText>.master_place {
+	font-size: .55rem;
+	color: #484856;
+	margin-left: .5rem;
+}
+
+#master>li>.masterText>.master_hits {
+	font-size: .5rem;
+	float: right;
+	margin: 1.2rem .5rem 0rem 0rem;
+}
+
+
+/*最近比赛*/
+#competition {
+	border-bottom: none;
+}
+
+#competition img {
+	width: 100%;
+	height: 100%;
+}
+
+#competition div {
+	width: 100%;
+	height: 100%;
+	line-height: 8.5rem;
+	text-align: center;
+	font-size: 1rem;
+	margin-top: -8.5rem;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	position: relative;
+}
+
+#competition p {
+	color: white;
+	width: 80%;
+	height: 80%;
+	font-size: 1rem;
+	margin: auto;
+}
+
+
+/*底部导航栏被选中*/
+.chosen {
+	color: #1EB496;
+	font-weight: bold;
+}

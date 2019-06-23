@@ -1,0 +1,119 @@
+/*字体*/
+@font-face {
+	font-family: logo;
+	src: url('../font/logoFont.ttf');
+}
+
+
+/*tab选项卡*/
+.wrapper {
+	width: 100%;
+	margin-top: 1.8rem;
+}
+
+.tab {
+	height: 1.5rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.tab li {
+	width: 50%;
+	font-size: .7rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	background-color: #323237;
+	color: #ccc;
+	border-bottom: .2rem solid #323237;
+}
+
+.content {
+	width: 100%;
+	clear: both;
+	border-top: .7rem solid #f0f0f0;
+}
+
+.content .main {
+	float: left;
+	display: none;
+}
+
+.content .main.selected {
+	display: block;
+	width: 100%;
+}
+
+.tab li.active {
+	border-color: #1EB496;
+	color: #1EB496;
+	font-weight: bold;
+}
+
+
+/*训练列表*/
+.list {
+	width: 95%;
+	margin: 0rem auto 1rem;
+	position: relative;
+}
+
+.list li {
+	width: 100%;
+	height: 9rem;
+	margin-bottom: .5rem;
+}
+
+.list img {
+	width: 100%;
+	height: 100%;
+}
+
+.list a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.list div {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-top: -9rem;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	position: relative;
+}
+
+.list div>p {
+	margin: auto;
+	color: white;
+	font-size: .7rem;
+}
+
+.list div>p>span {
+	color: #1EB496;
+	font-weight: 700;
+}
+
+.list .name {
+	padding-top: 2.6rem;
+	line-height: 2rem;
+	height: 2rem;
+	font-size: 1rem;
+}
+
+.list .position {
+	position: absolute;
+	bottom: .5rem;
+	right: .5rem;
+	text-align: right;
+	font-size: .6rem;
+}
+/*底部导航栏被选中*/
+.chosen {
+	color: #1EB496;
+	font-weight: bold;
+}

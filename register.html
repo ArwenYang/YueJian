@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页</title>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/registerStyle.css">
+	</head>
+	<body>	
+		<div id="header">
+			<a href="login.html">
+				<p><span class="iconfont icon-zuoshuangjiantou "></span>返回登录</p>
+			</a>
+		</div>
+		<div id="mid">
+			<p>约·健</p>
+			<ul>
+                <li>
+                    <p><span class="iconfont icon-dianhua"></span></p>
+                    <input type="text" name="user_phone" id="user_phone" autocomplete="off" required placeholder="请输入手机号码">
+                    <img src="img/ok.png" alt="" class="ok">
+                    <p class="alert" id="alert_phone"></p> 
+                </li>
+                <li>
+                    <p><span class="iconfont icon-suo"></span></p>
+                    <input type="password" name="user_pass" id="user_pass" required placeholder="请输入密码">
+                    <img src="img/ok.png" alt="" class="ok">
+                    <p class="alert" id="alert_pass"></p> 
+                </li>
+                <li>
+                    <p><span class="iconfont icon-suo"></span></p>
+                    <input type="password" name="user_repass" id="user_repass" required placeholder="请确认密码">
+                    <img src="img/ok.png" alt="" class="ok">
+                    <p class="alert" id="alert_repass"></p> 
+                </li>
+                <li>
+                    <p><span class="iconfont icon-yanzhengma"></span></p>
+                    <input type="text" name="checkCode" id="checkCode" autocomplete="off" required placeholder="请输入验证码"> 
+                    <div id="code"></div>
+                    <img src="img/ok.png" alt="" class="ok">
+                    <p class="alert" id="alert_code"></p> 
+                </li>
+            </ul>
+			<!--<input type="button" value="获取验证码" name="getCode" id="getCode">-->
+			<input type="submit" id="sub" value="注册">	
+		</div>
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<!--<script src="js/bmob-min.js"></script>-->
+		<script src="js/alert.js"></script>
+		<script src="js/registerJS.js"></script>
+	</body>
+</html>

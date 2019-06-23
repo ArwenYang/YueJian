@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>俱乐部详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/clubDetailStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部标题栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back()"></span>
+				<p>俱乐部</p>
+			</div>
+			<!-- 头部标题栏结束 -->
+			
+			
+			<!-- 轮播图开始 -->
+	  		<div class="swiper-container swiper1">
+	    		<div class="swiper-wrapper">
+	      			<div class="swiper-slide">
+	      				<img src="img/swiper1.png">
+	      			</div>
+	      			<div class="swiper-slide">
+	      				<img src="img/swiper2.png">
+	      			</div>
+	      			<div class="swiper-slide">
+	      				<img src="img/swiper3.png">
+	      			</div>
+	      			<div class="swiper-slide">
+	      				<img src="img/swiper4.png">
+	      			</div>
+	      			<div class="swiper-slide">
+	      				<img src="img/swiper5.png">
+	      			</div>
+	    		</div>
+	    		<!--<div class="swiper-button-next"></div>
+	    		<div class="swiper-button-prev"></div>-->
+	    		<div class="swiper-pagination swiper-pagination1"></div>
+	  		</div>
+	  		<!-- 轮播图结束 -->
+			
+			<!--俱乐部基本信息开始-->
+			<div id="basicInfo">
+				<p class="large">{{club_name}}</p>
+				<p><span class="iconfont icon-dingwei2"></span>{{place}}</p>
+				<p>开放时间<span>{{open_time}}</span></p>
+				<div class="operation">
+					<form action="javascript:;" method="post" id="gzForm">
+						<img src="img/collect_1.png" alt="" @click="tar.pinned=!tar.pinned">
+						<p v-pin='tar.pinned'>关注</p>
+					</form>
+				</div>		
+			</div>
+			<!--俱乐部基本信息结束-->
+			<!-- 活动图片开始 -->
+			<img id="club_pic" :src="'http://172.24.10.175/workout/Uploads/'+thumb">
+			<!-- 活动图片结束 -->
+			<!--俱乐部简介开始-->
+			<div class="section">
+				<p class="title">俱乐部简介</p>
+				<p>需要装备：<span>{{equipsuggest}}</span></p>
+				<p v-html="introduction"></p>	
+			</div>
+			<!--俱乐部简介结束-->
+			
+			<!--教练介绍开始-->
+			<div class="section">
+				<p class="title">教练介绍</p>
+				<ul class="master">
+	  				<!--<li>
+	  					<a href="#">
+							<img src="http://172.24.10.175/workout/Uploads/contest/thumb/20171103/thumb_20171103113515_1835759987.jpg"> 
+						</a>
+						<div class="masterText">
+							<p class="master_name"><a href="#">姓名/<span>教课大师</span></a></p>
+							<p class="master_place"><span class="iconfont icon-dingwei2"></span>省 市 区</p>
+							<p class="master_intro">本人有广泛的兴趣爱好，同时对工作认真负责，有较强的团队合作精神，遇到困难不畏惧，虚心请教.</p>
+						</div>	
+					 </li>-->
+	  			</ul>
+			</div>
+			<!--教练介绍结束-->
+			
+			<!--精品课程开始-->
+			<div class="section">
+				<p class="title">精品课程</p>
+				<ul class="list">
+			  		<li>
+						<img src="http://172.24.10.175/workout/Uploads/train/thumb/20190521/thumb_20190521103919_691155159.jpg">
+						<a href="#">
+							<div>
+								<p class="name">全部</p>
+								<p class="date"><span>周五下午</span>我们在<span>三期</span>等你！</p>
+								<p class="level">训练等级：<span>入门</span></p>
+								<p class="price">￥45</p>
+							</div>
+						</a>
+					</li>
+			  	</ul>
+			</div>
+			<!--精品课程结束-->
+			
+			<!--相关视频开始-->
+			<div class="section">
+				<p class="title">相关视频</p>
+				<ul>
+					<li>
+						<video src="video/jianshensp.mp4" controls poster="img/video.png"></video>
+					</li>
+					<li>
+						<video src="video/jianshensp.mp4" controls poster="img/video.png"></video>
+					</li>
+				</ul>
+			</div>
+			<!--相关视频结束-->
+			
+			<!--联系方式开始-->
+			<div class="section last">
+				<p class="title">联系方式</p>
+				<ul>
+					<li>
+						<p class="left">地址</p>
+						<p class="right">{{place}}</p>
+					</li>
+					<li>
+						<p class="left">咨询热线</p>
+						<p class="right">{{club_tel}}</p>
+					</li>
+				</ul>
+			</div>
+			<!--联系方式结束-->	
+		</div>
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/lunbo.js"></script>
+		<script src="js/jquery-form.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/clubDetailJS.js"></script>
+	</body>
+</html>

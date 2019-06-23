@@ -1,0 +1,183 @@
+/*头部标题栏*/
+#header {
+	width: 100%;
+	height: 2rem;
+	background: #323237;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#header>span {
+	color: #1EB496;
+	font-size: 1rem;
+	margin: .5rem;
+	float: left;
+}
+
+#header>p {
+	color: #CCCCCC;
+	font-size: .8rem;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+	letter-spacing: .5rem;
+	float: left;
+	margin-left: 5rem;
+}
+/*晒图详情*/
+#content {
+	width: 95%;
+	margin: 2rem auto 2rem;
+}
+
+#content .head {
+	height: 3.5rem;
+	line-height: 3.5rem;
+	font-size: .7rem;
+}
+
+#content .head .own_pic {
+	float: left;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 1rem .5rem 1rem 0;
+	border-radius: 50%;
+}
+
+#content .subject {
+	white-space: normal;
+	line-height: 1.5rem;
+	font-size: .8rem;
+}
+
+.content {
+	overflow: hidden;
+	width: 100%;
+}
+
+.content>img {
+	width: 33%;
+	height: 6rem;
+	margin-top: .3rem;
+	border-radius: .5rem;
+	float: left;
+}
+
+#content .foot {
+	margin: 0 auto;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: .6rem;
+	color: #999;
+	overflow: hidden;
+}
+
+#content .foot>img {
+	width: .7rem;
+	height: .7rem;
+	float: right;
+	margin-top: .7rem;
+}
+
+#content .foot>span {
+	float: right;
+	margin-right: .5rem;
+}
+
+#content .foot>.time {
+	float: left;
+}
+/*评论列表*/
+#comment {
+	width: 95%;
+	margin: .8rem auto 1rem;
+	background-color: #eee;
+	border-radius: .5rem;
+	margin-bottom: 5rem;
+}
+
+#comment>p {
+	font-size: .8rem;
+	text-indent: .5rem;
+	border-bottom: 1px solid #000000;
+	height: 2rem;
+	line-height: 2rem;
+}
+
+#comment>ul>li {
+	overflow: hidden;
+	border-top: 1px solid #000;
+}
+
+#comment>ul>li>img {
+	float: left;
+	width: 2rem;
+	height: 2rem;
+	margin: 1rem .5rem;
+	border-radius: 50%;
+}
+
+#comment>ul>li>div {
+	float: left;
+	width: 80%;
+	margin: .4rem 0rem;
+}
+
+#comment>ul>li>div>p {
+	margin-left: .5rem;
+}
+
+#comment>ul>li>div>.commentName {
+	font-size: .8rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+}
+
+#comment>ul>li>div>.commentContent {
+	font-size: .6rem;
+	color: #333;
+	line-height: .8rem;
+}
+
+#comment>ul>li>p {
+	clear: both;
+	font-size: .6rem;
+	text-align: right;
+	margin-right: .6rem;
+	margin-bottom: .6rem;
+	color: #aaa;
+}
+/*发表评论*/
+#footer {
+	width: 100%;
+	height: 2.5rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #f8f8f8;
+	z-index: 999;
+	overflow: hidden;
+}
+
+#footer>input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: .5rem;
+	font-size: .7rem;
+	width: 70%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin: .5rem;
+	float: left;
+}
+
+#footer>input[type="button"] {
+	width: 15%;
+	font-size: .8rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-radius: .5rem;
+	margin: .5rem;
+	float: left;
+}

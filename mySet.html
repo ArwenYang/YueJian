@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人设置</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+		<link rel="stylesheet" type="text/css" href="css/mySetStyle.css">
+	</head>
+	<body>
+		<!-- 头部搜索栏开始 -->
+		<div id="header">
+			<span class="iconfont icon-zuoshuangjiantou "></span>
+			<p>个人设置</p>
+		</div>
+		<!-- 头部搜索栏结束 -->
+		
+		<!--用户基本信息开始-->
+		<div id="userInfo">
+			<div class="bgBlur"></div>
+			<div class="content">
+				<img src="img/defaultPic.jpg">
+				<p></p>	
+			</div>
+		</div>
+		<!--用户基本信息结束-->
+		
+		<!--功能列表开始-->
+		<div id="service">
+			<ul>
+				<li>
+					<span class="iconfont icon-xiugai"></span>
+					<span>信息修改</span>
+					<img src="img/pubilc_menu_arrow.png" alt="">
+				</li>
+				<li>
+					<span class="iconfont icon-suo"></span>
+					<span>重置密码</span>
+					<img src="img/pubilc_menu_arrow.png" alt="">
+				</li>
+				<li>
+					<span class="iconfont icon-yaoqing"></span>
+					<span>邀请好友</span>
+					<img src="img/pubilc_menu_arrow.png" alt="">
+				</li>
+				<li>
+					<span class="iconfont icon-xintubiao-"></span>
+					<span>清理缓存</span>
+					<img src="img/pubilc_menu_arrow.png" alt="">
+				</li>
+				<li>
+					<span class="iconfont icon-bangzhu"></span>
+					<span>帮助与反馈</span>
+					<img src="img/pubilc_menu_arrow.png" alt="">
+				</li>
+			</ul>
+		</div>
+		<!--功能列表结束-->
+		
+		<!-- 退出登录开始 -->
+		<div id="footer">
+			<p>退出登录</p>
+		</div>
+		<!-- 退出登录结束 -->
+		
+		<!--修改密码模块开始-->
+		<div id="passEdit">
+			<p id="alertError"></p>
+			<form action="javascript:;" method="post" id="passForm">
+				<ul>
+					<li>
+						<span>请输入新密码：</span>
+						<input type="password" name="" id="user_pass" value="" />
+					</li>
+					<li>
+						<span>请确认新密码：</span>
+						<input type="password" name="" id="user_repass" value="" />
+					</li>
+				</ul>
+				<input type="button" value="确认修改" onclick="pswchange()">
+				<input type="button" value="取消" onclick="backSet()">
+			</form>
+		</div>
+		<!--修改密码模块结束-->
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/jquery-form.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/mySetJS.js"></script>
+	</body>
+</html>

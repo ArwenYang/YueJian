@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>信息修改</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/myEditStyle.css">
+	</head>
+	<body>
+		<div id="app">
+			<!-- 头部搜索栏开始 -->
+			<div id="header">
+				<span class="iconfont icon-zuoshuangjiantou " @click="back"></span>
+				<p>信息修改</p>
+			</div>
+			<!-- 头部搜索栏结束 -->
+			
+			<form action="javascript:;" method="post" id="infoForm">
+				<!--修改头像开始-->
+				<div id="userInfo">
+					<div class="bgBlur"></div>
+					<div class="content">
+						<div class="container_pic">    
+					        <img :src="photo"/>
+					        <input type="file" id="file_input" name="photo" @change="changePic"> 
+				        </div> 
+				        <p>换个漂亮的头像吧~</p>	
+				    </div> 
+				</div>
+				<!--修改头像结束-->
+				
+				<!--功能列表开始-->
+				<div id="service">
+					<ul>
+						<li>
+							<span>昵称</span>
+							<input type="text" name="" id="" value="" />
+						</li>
+						<li>
+							<span>爱好</span>
+							<input type="text" name="" id="" value="" />
+						</li>
+						<li>
+							<span>邮箱</span>
+							<input type="text" name="" id="" value="" />
+						</li>
+						<li>
+							<span>地址</span>
+							<input type="text" name="" id="" value="" />
+						</li>
+						<li>
+							<span>所在俱乐部</span>
+							<input type="text" name="" id="" value="" />
+						</li>
+					</ul>
+				</div>
+				<!--功能列表结束-->
+				
+				<!-- 提交修改开始 -->
+				<div id="footer">
+					<p @click="change">提交修改</p>
+				</div>
+				<!-- 提交修改结束 -->					
+			</form>	
+		</div>
+		
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+		<script src="js/jquery-form.js"></script>
+		<script src="js/alert.js"></script>
+		<script src="js/myEditJS.js"></script>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+/*头部标题栏*/
+#header {
+	width: 100%;
+	height: 2rem;
+	background: #323237;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#header>span {
+	color: #1EB496;
+	font-size: 1rem;
+	margin: .5rem;
+	float: left;
+}
+
+#header>p {
+	color: #CCCCCC;
+	font-size: .8rem;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+	letter-spacing: .5rem;
+	float: left;
+	margin-left: 5rem;
+}
+/*用户身份*/
+#role {
+	margin: 3rem auto 0rem;
+	overflow: hidden;
+	width: 50%;
+}
+
+#role>p {
+	font-size: .7rem;
+	line-height: 1.5rem;
+}
+/*订单详情*/
+#count {
+	margin-top: 1rem;
+}
+
+.order {
+	width: 100%;
+	border-top: 1.3rem solid #f0f0f0;
+}
+
+.order>.name {
+	width: 95%;
+	margin: auto;
+	font-size: .8rem;
+	letter-spacing: .1rem;
+	line-height: 1.1rem;
+	padding: 1rem 0rem .6rem;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.order>.name>span {
+	font-size: .6rem;
+}
+
+.order>.mid {
+	width: 95%;
+	height: 7rem;
+	margin: auto;
+	overflow: hidden;
+	padding: .8rem 0rem;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.order>.mid>img {
+	width: 60%;
+	height: 7rem;
+	float: left;
+}
+
+.order>.mid>p {
+	width: 40%;
+	height: 7rem;
+	line-height: 7rem;
+	font-size: 1rem;
+	text-align: center;
+	float: right;
+	color: #ff5400;
+}
+
+.order>.mid>p>span {
+	font-size: .6rem;
+	color: #333;
+}
+
+.order>.buy {
+	width: 95%;
+	height: 2.5rem;
+	margin: auto;
+	border-bottom: 1px solid #CCCCCC;
+	overflow: hidden;
+}
+
+.order>.buy>p {
+	float: left;
+	font-size: .7rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	color: #aaa;
+}
+
+.order>.buy>.num {
+	float: right;
+	overflow: hidden;
+	height: 1.3rem;
+	margin: .6rem 1rem;
+	border: .12rem solid #bbb;
+	border-radius: .3rem;
+}
+
+.order>.buy>.num>div {
+	float: left;
+	font-weight: bold;
+	text-align: center;
+	width: 1.2rem;
+	height: 1.3rem;
+	line-height: 1.3rem;
+}
+
+.order>.buy>.num>.number {
+	font-weight: normal;
+	width: 2.6rem;
+	border-left: .12rem solid #bbb;
+	border-right: .12rem solid #bbb;
+}
+
+.order>.detail {
+	width: 95%;
+	margin: auto;
+}
+
+.order>.detail>p {
+	line-height: 1rem;
+	font-size: .6rem;
+	color: #aaa;
+	margin: .5rem 0rem;
+}
+/*结算方法*/
+#method {
+	padding-bottom: 3rem;
+	border-top: 1.3rem solid #f0f0f0;
+}
+
+#method>ul>li {
+	width: 95%;
+	height: 2rem;
+	line-height: 2rem;
+	margin: auto;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+}
+
+#method>ul>li:nth-of-type(3) {
+	border: none;
+}
+
+#method>ul>li>img {
+	height: 1.2rem;
+	margin: .4rem .7rem;
+	float: left;
+}
+
+#method>ul>li>p {
+	float: left;
+	font-size: .8rem;
+	color: #555;
+}
+
+#method>ul>li>input[type="radio"] {
+	float: right;
+	margin-top: .8rem;
+}
+/*结算*/
+#footer {
+	width: 100%;
+	height: 2.3rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	border-top: .1rem solid #ccc;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+#footer>p {
+	font-size: .6rem;
+	height: 2.3rem;
+	line-height: 2.3rem;
+	float: right;
+}
+
+#footer>p>span {
+	font-size: .8rem;
+	color: #ff5400;
+	font-weight: bold;
+}
+
+#footer>div {
+	font-size: .7rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	width: 3rem;
+	margin: .4rem 1rem;
+	border: 1px solid #aaa;
+	border-radius: .2rem;
+	background-color: #96e8ba;
+	text-align: center;
+	float: right;
+}
